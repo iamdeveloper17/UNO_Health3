@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Input Without Arrows</title>
+  <style>
+    /* Hide the arrows for number input fields in most browsers */
+    input[type="number"] {
+      -moz-appearance: textfield;  /* Firefox */
+      -webkit-appearance: none;    /* Chrome, Safari, Edge */
+      appearance: none;            /* Standard property */
+    }
+
+    /* Optionally, remove the default number input box shadow in WebKit browsers */
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <label for="quantity">Enter Quantity:</label>
+  <input id="quantity" type="number" name="quantity" min="1" step="1">
+
+</body>
+</html>
